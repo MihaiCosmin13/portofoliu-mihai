@@ -1,0 +1,86 @@
+<!DOCTYPE html >
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofoliul Meu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+</head>
+<body onload="fadeIn()">
+  <!-- Navigație principală cu linkuri către secțiuni -->
+  <nav class="navbar">
+  <ul>
+    <li><a href="#proiecte"><i class="fa-solid fa-layer-group"></i> Proiecte</a></li>
+    <li><a href="#despre"><i class="fa-solid fa-user"></i> Despre</a></li>
+    <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+  </ul>
+</nav>
+
+  <!-- Buton pentru schimbarea temei între light și dark -->
+  <button class="theme-toggle" onclick="toggleTheme()" id="themeToggleBtn">🌙</button>
+
+
+  <!-- Informații introductive -->
+  <header>
+    <h1>Mihai Popescu</h1>
+    <p>Designer & Frontend Developer</p>
+  </header>
+
+  <div class="container">
+    <!-- Secțiune Proiecte -->
+    <section id="proiecte" class="reveal">
+      <h2 class="section-title">Proiecte</h2>
+      <div class="project-grid">
+        <div class="project-card fade-in-card">...</div>
+          <h3>Blog de Călătorii</h3>
+          <p>Design responsive pentru un blog modern cu accent pe fotografie și storytelling.</p>
+        </div>
+        <div class="project-card fade-in-card">...</div>
+          <h3>Landing Page pentru Aplicație</h3>
+          <p>Pagini dinamice de promovare cu CTA-uri clare și layout eficient.</p>
+        </div>
+        <div class="project-card fade-in-card">...</div>
+          <h3>Portofoliu Artist Vizual</h3>
+          <p>Un site elegant pentru un ilustrator digital, cu galerie fullscreen.</p>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- Secțiune Despre -->
+    <section id="despre" class="reveal">
+      <h2 class="section-title">Despre Mine</h2>
+      <p>Sunt un designer și developer pasionat de simplitate, claritate și experiențe digitale bine gândite. Am lucrat la proiecte personale axate pe design de brand, identitate vizuală și website-uri statice optimizate pentru performanță.</p>
+    </section>
+
+    <!-- Secțiune Contact -->
+    <section id="contact" class="reveal">
+      <h2 class="section-title">Contact</h2>
+      <p><i class="fa-solid fa-paper-plane"></i> Scrie-mi pe <a href="mailto:hello@email.com" class="email-link">hello@email.com</a></p>
+
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="text" name="name" placeholder="Nume" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" rows="4" placeholder="Mesajul tău..." required></textarea>
+        <button type="submit">Trimite</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Footer simplu -->
+  <footer>
+    &copy; 2025 Mihai Popescu. Toate drepturile rezervate.
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

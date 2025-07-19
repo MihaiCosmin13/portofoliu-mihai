@@ -1,0 +1,247 @@
+<!DOCTYPE html >
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofoliul Meu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700.. family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Orbitron -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- Unica One -->
+<link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+
+<!-- Space Grotesk -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Sora -->
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+</head>
+<body onload="fadeIn()">
+  <div id="scrollProgress"></div>
+  <div id="particles-js"></div>
+  <!-- Navigație principală cu linkuri către secțiuni -->
+  <nav class="navbar">
+  <ul>
+    <li><a href="#proiecte"><i class="fa-solid fa-layer-group"></i> Proiecte</a></li>
+    
+    <li><a href="#despre"><i class="fa-solid fa-user"></i> Despre</a></li>
+    
+    <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    
+  </ul>
+</nav>
+
+  <!-- Buton pentru schimbarea temei între light și dark -->
+  
+
+  
+
+
+  <!-- Informații introductive -->
+  <header>
+    <h1>Mihai Cosmin</h1>
+    <p>Designer & Frontend Developer</p>
+  </header>
+
+  <div class="container">
+    <!-- Secțiune Proiecte -->
+    <section id="proiecte" class="reveal">
+      
+      <h2 class="section-title">Proiecte</h2>
+      
+      <div class="project-grid">
+          <div class="project-card fade-in-card">
+            <h3>Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora autem commodi dolores magni, consequuntur obcaecati deserunt soluta voluptates doloribus fugit, voluptatum voluptate numquam, reprehenderit exercitationem optio. At quas iusto unde!</p>
+          </div>
+      <div class="project-card fade-in-card">
+             <h3>Lorem</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime eius, quos quia repellendus officia rerum eligendi. Molestias, ad, magnam dolorem repudiandae odit laborum consequuntur nulla aliquid iusto nam esse.</p>
+         </div>
+    <div class="project-card fade-in-card">
+            <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quaerat nostrum consequuntur praesentium non harum vitae. Porro, labore iste recusandae quam asperiores possimus eum molestiae omnis? Modi nesciunt quidem dolores!</p>
+    </div>
+</div>
+
+    </section>
+    <div class="section-divider"></div>
+
+  
+
+    <!-- Secțiune Despre -->
+    <section id="despre" class="reveal">
+      <div class="section-divider"></div>
+      <h2 class="section-title">Despre Mine</h2>
+      
+      <p>Sunt un designer și developer pasionat de simplitate, claritate și experiențe digitale bine gândite. Am lucrat la proiecte personale axate pe design de brand, identitate vizuală și website-uri statice optimizate pentru performanță.</p>
+    
+    </section>
+    <div class="section-divider"></div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolores quos quod alias libero magni nam! Molestias rem nam eaque similique adipisci in, fugiat reprehenderit ab, repudiandae, itaque quam! Blanditiis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. At repellendus explicabo fuga veritatis mollitia ea doloremque ab! Eum vitae explicabo qui iusto cupiditate, similique sapiente praesentium voluptatem tempora, eius illum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea repellat animi exercitationem quaerat dolore reprehenderit quae at ab. Molestias dicta odit vel natus est nobis corrupti reprehenderit modi. Culpa,  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga odio molestiae eius modi, tenetur in autem a nobis, dolor, eveniet est blanditiis? Omnis temporibus sed tempore voluptatem eius voluptatum officia! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quas minima minus id porro quo quis cupiditate, totam soluta molestiae. Labore laborum ex corporis, debitis rerum asperiores nisi quibusdam molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae debitis illum corrupti, illo alias commodi ab fuga corporis excepturi explicabo facere? Natus ratione adipisci earum animi incidunt, rem voluptatem consequuntur!</p>
+
+    <!-- Secțiune Contact -->
+    <section id="contact" class="reveal">
+      <div class="section-divider"></div>
+      <h2 class="section-title">Contact</h2>
+     
+      <p><i class="fa-solid fa-paper-plane"></i> Scrie-mi pe <a href="mailto:hello@email.com" class="email-link">hello@email.com</a></p>
+
+      <form id="contactForm">
+  <div class="form-group">
+    <input type="text" id="nume" name="nume" required placeholder=" " />
+    <label for="nume">Nume</label>
+  </div>
+  <div class="form-group">
+    <input type="email" id="email" name="email" required  placeholder=" "/>
+    <label for="email">Email</label>
+  </div>
+  <div class="form-group">
+    <textarea id="mesaj" name="mesaj" rows="4" required placeholder=" "></textarea>
+    <label for="mesaj">Mesaj</label>
+  </div>
+  <button type="submit">Trimite</button>
+  <p id="confirmMessage" class="confirm-message">Mesaj trimis cu succes! ✅</p>
+</form>
+    
+    </section>
+    <div class="section-divider"></div>
+  </div>
+
+  <!-- Footer simplu -->
+  <footer>
+    &copy; 2025 Mihai Cosmin. Toate drepturile rezervate.
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="particles-js"></script>
+  
+  /* <script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 50 },
+      color: { value: "#aa88ff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.1 },
+      size: { value: 3 },
+      line_linked: {
+        enable: true,
+        distance: 130,
+        color: "#aa88ff",
+        opacity: 0.2,
+        width: 1
+      },
+      move: { enable: true, speed: 1.2 }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: false }
+      },
+      modes: {
+        grab: {
+          distance: 140,
+          line_linked: { opacity: 0.25 }
+        }
+      }
+    },
+    retina_detect: true
+  });
+</script> */
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const msg = document.getElementById("confirmMessage");
+    msg.style.display = "block";
+
+    // Opțional: resetăm formularul după trimitere
+    this.reset();
+
+    // Ascundem mesajul după 3 secunde
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 3000);
+  });
+</script>
+
+
+
+<button class="theme-toggle"  id="themeToggleBtn">🌙</button> 
+
+
+
+<script>
+  const html = document.documentElement;
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
+
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  html.dataset.theme = savedTheme;
+  themeToggleBtn.textContent = savedTheme === "light" ? "🌙" : "☀️";
+
+  function toggleTheme() {
+    const isLight = html.dataset.theme === "light";
+    const newTheme = isLight ? "dark" : "light";
+    html.dataset.theme = newTheme;
+    localStorage.setItem("theme", newTheme);
+    themeToggleBtn.textContent = newTheme === "light" ? "🌙" : "☀️";
+  }
+
+  themeToggleBtn.addEventListener("click", toggleTheme);
+</script>
+
+<script>
+  window.onload = () => {
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  };
+</script>
+ 
+<!-- Alte elemente -->
+  <button id="backToTop" title="Înapoi sus">⮝</button>
+<script>
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".navbar a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 60;
+      const sectionHeight = section.offsetHeight;
+     if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight || window.innerHeight + window.scrollY >= document.body.offsetHeight)
+ {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+</body>
+</html>
