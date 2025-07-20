@@ -126,7 +126,6 @@ section {
 }
 
 #backToTop {
-  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -135,7 +134,7 @@ section {
   height: 55px;
   border: none;
   border-radius: 50%;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   font-size: 26px;
   cursor: pointer;
@@ -145,9 +144,15 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
+}
 
-  box-shadow:
-    0 0 5px var(--accent-color),
+#backToTop.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  box-shadow: 
+    0 0 5px var(--accent-color), 
     0 0 10px var(--accent-color),
     0 0 20px var(--accent-color),
     0 0 40px var(--accent-color);
@@ -156,6 +161,7 @@ section {
     0 0 10px var(--accent-color),
     0 0 20px var(--accent-color);
 }
+
 
 #backToTop:hover {
   transform: scale(1.1);
@@ -755,7 +761,4 @@ html {
   pointer-events: auto;
   }
 
-  .scroll-to-top i {
-  color: var(--text-color); /* Asigură-te că e vizibil pe mobil */
-  font-size: 1.5rem;
-}
+  
