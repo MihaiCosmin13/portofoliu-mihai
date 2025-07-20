@@ -362,6 +362,26 @@ header p {
   color: #be0b0bdc;
 }
 
+/* Fade + slide-up combinate */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+/* Animația combinată */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .section-panel {
   width: 100vw;
   margin-left: calc(50% - 50vw);
