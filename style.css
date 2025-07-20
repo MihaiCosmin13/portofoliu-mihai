@@ -754,3 +754,8 @@ html {
   transform: translateY(0);
   pointer-events: auto;
   }
+
+  .scroll-to-top i {
+  color: var(--text-color); /* Asigură-te că e vizibil pe mobil */
+  font-size: 1.5rem;
+}
