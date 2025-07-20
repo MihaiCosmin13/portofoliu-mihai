@@ -24,20 +24,49 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
 </head>
+
+
+
 <body onload="fadeIn()">
   <div id="scrollProgress"></div>
   <div id="particles-js"></div>
   <!-- Navigație principală cu linkuri către secțiuni -->
-  <nav class="navbar">
+ <nav class="navbar">
+  <button class="menu-toggle" aria-label="Deschide meniul">
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+  </button>
+
   <ul>
     <li><a href="#proiecte"><i class="fa-solid fa-layer-group"></i> Proiecte</a></li>
-    
     <li><a href="#despre"><i class="fa-solid fa-user"></i> Despre</a></li>
-    
     <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-    
   </ul>
 </nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Salut, sunt Mihai.</h1>
+    <p>Designer grafic pasionat de branding, ilustrație și estetică digitală.</p>
+    <a href="#proiecte" class="cta-button">Vezi Proiectele Mele</a>
+
+    <!-- Iconițele apar imediat sub buton -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <img src="icons/instagram-speech-bubble-21669.svg" alt="Instagram" />
+      </a>
+      <a href="https://www.behance.net" target="_blank" aria-label="Behance">
+        <img src="icons/behance-speech-bubble-21686.svg" alt="Behance" />
+      </a>
+      <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+        <img src="icons/linkedin-speech-bubble--21671.svg" alt="LinkedIn" />
+      </a>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Buton pentru schimbarea temei între light și dark -->
   
@@ -52,27 +81,54 @@
   </header>
 
   <div class="container">
-    <!-- Secțiune Proiecte -->
-    <section id="proiecte" class="reveal">
+
+  <div class="container">
+  <section id="proiecte" class="reveal">
+    <h2 class="section-title">Proiecte</h2>
+
+
+    
+    <!--CARDURI PROIECTE-->
+
+    <div class="project-grid">
       
-      <h2 class="section-title">Proiecte</h2>
-      
-      <div class="project-grid">
-          <div class="project-card fade-in-card">
-            <h3>Ipsum</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora autem commodi dolores magni, consequuntur obcaecati deserunt soluta voluptates doloribus fugit, voluptatum voluptate numquam, reprehenderit exercitationem optio. At quas iusto unde!</p>
-          </div>
-      <div class="project-card fade-in-card">
-             <h3>Lorem</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime eius, quos quia repellendus officia rerum eligendi. Molestias, ad, magnam dolorem repudiandae odit laborum consequuntur nulla aliquid iusto nam esse.</p>
-         </div>
-    <div class="project-card fade-in-card">
-            <h3>Lorem Ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quaerat nostrum consequuntur praesentium non harum vitae. Porro, labore iste recusandae quam asperiores possimus eum molestiae omnis? Modi nesciunt quidem dolores!</p>
+      <!-- Card 1: Echoverse -->
+  <div class="project-card fade-in-card echoverse-card">
+  <a href="pages/echoverse.html">
+    <div class="project-image-container">
+      <img src="images/festival1-crop.png" alt="Poster Echoverse Festival" class="project-thumb zoom-img" />
     </div>
+    <h3>Echoverse Festival</h3>
+    <p>Identitate vizuală pentru un festival cosmic. Stil retro-futurist, branding și afiș ilustrat custom.</p>
+  </a>
 </div>
 
-    </section>
+
+
+      <!-- Card 2: Placeholder -->
+      <div class="project-card fade-in-card">
+        <a href="#">
+          <img src="images/placeholder2.jpg" alt="Proiect 2" class="project-thumb" />
+          <h3>Nume Proiect 2</h3>
+          <p>Scurtă descriere despre ce a implicat proiectul. Identitate vizuală, packaging sau altceva.</p>
+        </a>
+      </div>
+
+      <!-- Card 3: Placeholder -->
+      <div class="project-card fade-in-card">
+        <a href="#">
+          <img src="images/placeholder3.jpg" alt="Proiect 3" class="project-thumb" />
+          <h3>Nume Proiect 3</h3>
+          <p>Descriere scurtă – poate fi un afiș, un branding sau o colaborare artistică.</p>
+        </a>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+    <!--INCHEIERE CARDURI PROIECTE-->
+    
     <div class="section-divider"></div>
 
   
@@ -117,10 +173,15 @@
     <div class="section-divider"></div>
   </div>
 
+</div>
+
   <!-- Footer simplu -->
-  <footer>
-    &copy; 2025 Mihai Cosmin. Toate drepturile rezervate.
-  </footer>
+ <footer class="footer">
+  
+  
+  <p>© 2025 Mihai. Toate drepturile rezervate.</p>
+</footer>
+
 
   <script src="script.js"></script>
   <script src="particles-js"></script>
@@ -243,5 +304,17 @@
     });
   });
 </script>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navList = document.querySelector('.navbar ul');
+
+  toggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
+
+
+
 </body>
 </html>

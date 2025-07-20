@@ -1,0 +1,156 @@
+/* ===== BASE STYLES (nemodificate) ===== */
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #f7e5ca;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.cs-hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  background: linear-gradient(to bottom, #ffffff 0%, #f7e5ca 100%);
+}
+
+.cs-hero h1::after {
+  content: "";
+  display: block;
+  width: 240px;
+  height: 3px;
+  background: linear-gradient(to right, #ff9b05, #f34141);
+  margin: 1rem 0;
+  border-radius: 2px;
+}
+
+.cs-hero-img {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+.cs-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.cs-hero-content h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cs-hero-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cs-content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cs-content h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.cs-content ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.cs-footer {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cs-back {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== MEDIA QUERIES: TABLET + MOBILE ====== */
+
+@media (max-width: 1024px) {
+  .cs-hero-content, .cs-content {
+    padding: 1.5rem;
+  }
+
+  .cs-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .cs-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-hero {
+    padding: 2rem 1rem;
+  }
+
+  .cs-hero-img {
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  .cs-hero-content, .cs-content {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .cs-hero-content h1 {
+    font-size: 1.75rem;
+    text-align: left;
+  }
+
+  .cs-hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .cs-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .cs-content ul {
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs-hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .cs-hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .cs-hero-img {
+    width: 100%;
+    height: auto;
+  }
+}

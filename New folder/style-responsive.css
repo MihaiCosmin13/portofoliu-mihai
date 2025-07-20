@@ -1,0 +1,875 @@
+/* DEFINIREA CULORILOR ÎN FUNCȚIE DE TEMA ALEASĂ */
+:root {
+  --bg-color: #8000a0;             /* Fundal mov închis (tema implicită) */
+  --text-color: #f0f0f0;           /* Text alb-gri */
+  --card-color: #1a1a1a;           /* Fundal pentru carduri/sectiuni */
+  --link-color: #4dd0e1;           /* Linkuri albastre-verzui */
+  --border-color: #333;            /* Bordură discretă */
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;             /* Fundal alb pentru tema deschisă */
+  --text-color: #000000;           /* Text închis la culoare */
+  --card-color: #f3f3f3;           /* Fundal deschis pentru secțiuni */
+  --link-color: #007acc;           /* Albastru pentru linkuri */
+  --border-color: #ccc;            /* Borduri deschise */
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.75), rgba(0,0,0,0.8));
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  text-shadow: 0 0 3px #ff9b05;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #e7e6e6;
+}
+
+.cta-button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(243, 185, 99, 0.8);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(255, 155, 5, 0.9);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 60%
+  );
+  animation: expandFocus 5s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes expandFocus {
+  0% {
+    --x: 10%;
+    --y: 10%;
+  }
+  50% {
+    --x: 60%;
+    --y: 70%;
+  }
+  100% {
+    --x: 10%;
+    --y: 10%;
+  }
+}
+
+
+/*#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: transparent;
+  /* pointer-events: none;  ← scoate sau comentează asta 
+}*/
+
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: var(--accent-color, #a855f7); /* violet default */
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.2s ease;
+}
+
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    0 0 5px var(--accent-color),
+    0 0 10px var(--accent-color),
+    0 0 20px var(--accent-color),
+    0 0 40px var(--accent-color);
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px var(--accent-color),
+    0 0 20px var(--accent-color);
+}
+
+#backToTop:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 10px #fff,
+    0 0 20px var(--accent-color),
+    0 0 40px var(--accent-color),
+    0 0 60px var(--accent-color);
+}
+
+#backToTop.show {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* testează câte unul pe rând, aplicând aici */
+
+h1, h2, h3 {
+  font-family:   'Orbitron', sans-serif;
+  /* sau 'Unica One', 'Space Grotesk', 'Sora' */
+}
+
+/* RESETARE STILURI IMPLICITE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Space Grotesk, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+
+  background: linear-gradient(-45deg, #2a177e, #928dab, #2c3e50, #1abc9c);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NAVBAR */
+.section-divider {
+  height: 2px;
+  width: 120px;
+  margin: 1.5rem auto;
+  background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+  opacity: 0;
+  border-radius: 999px;
+  animation: fadeLine 1.5s ease forwards;
+}
+
+@keyframes fadeLine {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 0.6;
+    transform: scaleX(1);
+  }
+}
+
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--card-color);
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+
+.navbar a.active {
+  color: #ff9b05; /* culoarea accentuată */
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar ul li {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.navbar a {
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #8a2be2, #00ffff, #8a2be2);
+  background-size: 200% auto;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, background-position 0.4s ease;
+  box-shadow: 0 0 6px #00ffff, 0 0 12px #8a2be2;
+  border-radius: 1px;
+}
+
+.navbar a.active::after,
+.navbar a:hover::after {
+  transform: scaleX(1);
+  background-position: right center;
+}
+
+/*.navbar ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, var(--accent-color), transparent);
+  opacity: 1;
+}*/
+
+/*ANIMATIE NAVBAR*/
+
+.navbar ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 60%; /* sau 100% dacă vrei să ocupe tot */
+  background: linear-gradient(to bottom, transparent, var(--accent-color), transparent);
+  opacity: 0.8;
+  animation: pulseLine 3s ease-in-out infinite;
+  border-radius: 999px;
+}
+
+@keyframes pulseLine {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 0px var(--accent-color);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 8px var(--accent-color);
+  }
+}
+
+
+.navbar a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem;
+}
+
+.navbar a:hover {
+  color: #ff9b05;
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: var(--card-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #be0b0bdc;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  overflow: hidden;
+}
+
+.project-card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  padding: 1rem 1rem 1.5rem;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.project-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.project-thumb.zoom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.project-image-container:hover .zoom-img {
+  transform: scale(1.10);
+}
+
+.project-thumb.cropped {
+  object-position: top center; /* ajustezi după nevoie */
+}
+
+.project-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #c5c5c5;
+}
+
+.project-card p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  color: #a1a1a1;
+  line-height: 1.4;
+}
+
+
+
+/* Animație la intrare (staggered fade-in din lateral) */
+.fade-in-card {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* SECTIUNE DESPRE & CONTACT */
+#despre p, #contact p {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+.footer {
+  display: "";
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  font-family: Space Grotesk, sans-serif;
+  font-size: 0.875rem;
+  color: #c0c0c0;
+  border-top: 1px solid #eee;
+}
+
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center; /* sau "flex-start", dacă vrei aliniere la stânga */
+}
+
+.social-icons img {
+  width: 38px;
+  height: 38px;
+  opacity: 0.75;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /*(filter: brightness(0) invert(1); /* scoate dacă ai fundal deschis */
+}
+
+.social-icons a:hover img {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+
+/* BUTON SCHIMBA TEMA */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--card-color); /* respectă tema */
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--link-color);
+  color: white;
+}
+
+#themeToggleBtn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 999px; /* "pill" style */
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-size: 1.1rem;
+  z-index: 1000;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#themeToggleBtn:hover {
+  background: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+:root {
+  --accent-color: #8f44fd;       /* mov intens */
+  --accent-hover: #7a3ce6;
+}
+
+[data-theme="dark"] {
+  --accent-color: #ffffff33;     /* alb semitransparent */
+  --accent-hover: #ffffff55;
+}
+
+/* FORMULAR */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #888;
+  color: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: #ff9b05;
+}
+
+.form-group label {
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  font-size: 1rem;
+  color: #aaa;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -0.6rem;
+  left: 0.3rem;
+  font-size: 0.8rem;
+  color: #ff9b05;
+  background: var(--bg-color, #000);
+  padding: 0 0.3rem;
+}
+
+form button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #ff9b05;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 7px #ff9b05aa, 0 0 7px #ff9b05aa;
+}
+
+form button[type="submit"]:hover {
+  background: #ffa733;
+  box-shadow: 0 0 5px #ff9b05cc, 0 0 5px #ff9b05cc;
+  transform: scale(1.03);
+}
+
+#confirmMessage {
+  display: none;
+  margin-top: 1rem;
+  color: #00ff99;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.email-link {
+  color: #ff9b05;
+}
+
+
+/* Efect de fade-in la încărcare */
+body.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+body.fade-in.loaded {
+  opacity: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+/* GLASSMORPHISM STYLE + ANIMAȚII */
+.project-card {
+  background: rgba(26, 26, 26, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(128, 0, 160, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(128, 0, 160, 0.5);
+}
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* --- Case Studies Styles --- */
+
+/* case-studies.css */
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #f7e5ca;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.cs-hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  background: linear-gradient(to bottom, #ffffff 0%, #f7e5ca 100%);
+}
+
+.cs-hero h1::after {
+  content: "";
+  display: block;
+  width: 240px;
+  height: 3px;
+  background: linear-gradient(to right, #ff9b05, #f34141);
+  margin: 1rem 0;
+  border-radius: 2px;
+}
+
+
+.cs-hero-img {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+.cs-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.cs-hero-content h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cs-hero-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cs-content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cs-content h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.cs-content ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.cs-footer {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cs-back {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .cs-hero-content, .cs-content {
+    padding: 1rem;
+  }
+}
+
+
+
+/* --- Responsive Design --- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-thumb img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer,
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}

@@ -130,3 +130,5 @@ backToTopBtn.addEventListener("click", () => {
   reveals.forEach((reveal) => {
     observer.observe(reveal);
   });
+
+  
