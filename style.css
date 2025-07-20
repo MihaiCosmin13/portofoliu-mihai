@@ -44,7 +44,7 @@ section {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: var(--accent-color);
-  text-shadow: 0 0 3px #ff9b05;
+  text-shadow: 0 0 1px #ff9b05;
 }
 
 .hero-content p {
@@ -65,7 +65,7 @@ section {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(243, 185, 99, 0.8);
+  box-shadow: 0 0 15px #ff9b05;
 }
 
 .cta-button:hover {
