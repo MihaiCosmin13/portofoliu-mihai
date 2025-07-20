@@ -386,7 +386,7 @@ header p {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   background-color: var(--card-color);
-  padding: 3rem 0;
+  padding: 9rem 0;
 }
 
 
