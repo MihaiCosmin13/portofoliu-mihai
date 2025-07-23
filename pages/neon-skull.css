@@ -1,0 +1,409 @@
+/* Stiluri principale pentru pagina neon-skull.html */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #0e0e0e;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: orbitron,  'Arial Black', sans-serif;
+  color: #f7418f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-full {
+  display: block;
+  width: 100vw;
+  height: auto;
+}
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Stiluri lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .slides {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .slides:hover {
+      transform: scale(1.03);
+    }
+
+.intro {
+  padding: 60px 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #181a1c;
+}
+
+p {
+    font-family: Space Grotesk, sans-serif;
+}
+
+.intro-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.intro-subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #f7418f;
+}
+
+.intro-text {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 10px auto;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mockup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.mockup-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.mockup-grid img:hover {
+  transform: scale(1.03);
+}
+
+.branding-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.branding-info .logo-sample, .branding-info .color-palette {
+  flex: 1 1 300px;
+}
+
+.color-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 10px;
+  border: 1px solid #333;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: 2rem auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      height: 450px;
+      object-fit: contain;
+      background-color: #111;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s ease;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .dot-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .dot.active {
+      background-color: #f7418f;
+    }
+ 
+.back-to-portfolio {
+  text-align: center;
+  margin: 60px 0 30px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #f7418f;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(247, 65, 143, 0.5);
+}
+
+.back-button:hover {
+  background-color: #d52b74;
+  box-shadow: 0 0 18px rgba(247, 65, 143, 0.7);
+}
+
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+  padding: 0 40px;
+}
+
+.product-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* pătrat perfect */
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(247, 65, 143, 0.4);
+}
+
+/* Responsive fallback pentru ecrane mici */
+@media (max-width: 1024px) {
+  .product-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+}
+
+#lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  transform-origin: center center;
+  transition: transform 0.2s ease;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+
+/* Container general */
+.mockup-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Stil general imagine */
+.mockup-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Bloc 100% latime */
+.full-width {
+  width: 100%;
+}
+
+/* Două coloane reale */
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Trei coloane reale */
+.three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Responsiv pe mobil */
+@media (max-width: 768px) {
+  .two-columns,
+  .three-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.mockup-gallery img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.mockup-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  cursor: grab;
+  transition: transform 0.1s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+

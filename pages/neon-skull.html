@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Skull</title>
+  <link rel="stylesheet" href="neon-skull.css" />
+  <style>
+    
+  </style>
+</head>
+<body>
+    
+    <section class="hero">
+    <img class="hero-full" src="../images/CUTIE INTERIOR.png" alt="Neon Skull Hero Image" />
+  </section>
+
+    <div class="container">
+
+        <section class="section intro">
+  <h1 class="intro-title">NEON SKULL</h1>
+  <h2 class="intro-subtitle">Brand Identity & Apparel Design</h2>
+
+  <p class="intro-text">
+    <strong>Provocarea:</strong> Crearea de la zero a unei identități vizuale pentru NEON SKULL, un brand de streetwear și accesorii poziționat la intersecția dintre cultura gaming, muzica electronică și estetica cyberpunk. Provocarea a fost să dezvoltăm un brand care să fie atât modern și agresiv, cât și premium și plin de detalii, capabil să creeze o comunitate loială în jurul său.
+  </p>
+
+  <p class="intro-text">
+    <strong>Soluția:</strong> Am dezvoltat un sistem de branding complet, centrat pe un logo puternic, care îmbină elemente iconice (craniul) cu o estetică digitală (neonul). Identitatea este construită pe o paletă de culori vibrantă, o tipografie tech și un set de variații de logo care permit o aplicare flexibilă, de la imprimeuri mari pe ambalaje la detalii subtile, brodate, pe produse.
+  </p>
+</section>
+
+    <section class="section">
+      <h2>Mockupuri</h2>
+      <div class="slideshow-container">
+        <img class="slides" src="../images/tricou neonskull alb.png" alt="Mockup Tricou 1">
+        <img class="slides" src="../images/tricou neonskull.png" alt="Mockup Tricou 2">
+        <img class="slides" src="../images/bluza.png" alt="Mockup Bluza">
+        
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        
+      </div>
+    </section>
+
+
+    
+  
+
+
+    <section class="mockup-gallery">
+
+  <!-- Imagine 1 – full-width -->
+  <div class="full-width">
+    <img src="../images/eticheta bluza.png" alt="Etichetă gât">
+  </div>
+
+  <!-- Imagine 2 & 3 – două coloane -->
+  <div class="two-columns">
+    <img src="../images/tricou neonskull alb.png" alt="Tricou alb" alt="clickable-image">
+    
+    <img src="../images/tricou neonskull.png" alt="Tricou negru">
+  </div>
+
+  <!-- Imagine 4 – full-width -->
+  <div class="full-width">
+    <img src="../images/bluza.png" alt="Bluză mânecă lungă">
+  </div>
+
+  <!-- Imagine 5, 6, 7 – trei coloane -->
+  <div class="three-columns">
+    <img src="../images/sapca negru pe roz.png" alt="Șapcă neagră">
+    <img src="../images/sapca mov pe roz.png" alt="Șapcă mov">
+    <img src="../images/sapca 2.png" alt="Șapcă galbenă">
+  </div>
+
+  <!-- Imagine 8 – full-width -->
+  <div class="full-width">
+    <img src="../images/cutie neonskull.png" alt="Cutie Neon Skull">
+  </div>
+
+</section>
+
+
+<section class="section">
+
+      <h2>Branding & Elemente Vizuale</h2>
+      <div class="branding-info">
+        <div class="logo-sample">
+          <h3>Logoul principal</h3>
+          <img src="../images/logo neonskull color + text.png" alt="Logoul Neon Skull" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="color-palette">
+          <h3>Paletă cromatică</h3>
+          <div>
+            <span class="color-box" style="background-color: #f7418f;"></span> #f7418f<br>
+            <span class="color-box" style="background-color: #181a1c;"></span> #181a1c<br>
+            <span class="color-box" style="background-color: #2b2e31;"></span> #2b2e31<br>
+            <span class="color-box" style="background-color: #ffffff;"></span> #ffffff<br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <div style="text-align: center; margin: 50px 0;">
+    <a href="../index.html" class="back-button">← Înapoi la portofoliu</a>
+        </div>
+
+    <footer>
+      &copy; 2025 Neon Skull. Toate drepturile rezervate.
+    </footer>
+  </div>
+
+<div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <img id="lightbox-img" src="" alt="Imagine mărită">
+</div>
+
+
+
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName("slides");
+  const dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  if (dots[slideIndex - 1]) dots[slideIndex - 1].classList.add("active");
+}
+
+</script>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".close-btn");
+
+  let scale = 1;
+  let currentX = 0, currentY = 0;
+  let startX, startY, isDragging = false;
+
+  // Open lightbox
+  document.querySelectorAll(".mockup-gallery img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+      scale = 1;
+      currentX = 0;
+      currentY = 0;
+      lightboxImg.style.transform = `translate(0px, 0px) scale(1)`;
+    });
+  });
+
+  // Close lightbox
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+  });
+
+  // Drag
+  lightboxImg.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.clientX - currentX;
+    startY = e.clientY - currentY;
+    lightboxImg.style.cursor = "grabbing";
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    currentX = e.clientX - startX;
+    currentY = e.clientY - startY;
+    updateTransform();
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
+    lightboxImg.style.cursor = "grab";
+  });
+
+  // Zoom with scroll (limited to 1x–3x)
+  lightboxImg.addEventListener("wheel", (e) => {
+    e.preventDefault();
+    const zoomFactor = 0.1;
+    if (e.deltaY < 0) {
+      scale = Math.min(3, scale + zoomFactor);
+    } else {
+      scale = Math.max(1, scale - zoomFactor);
+    }
+    updateTransform();
+  });
+
+  function updateTransform() {
+    lightboxImg.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
+  }
+</script>
+
+<script>
+  let initialScale = 1, startDistance = 0;
+
+  // Pinch-zoom
+  lightboxImg.addEventListener("touchstart", (e) => {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      startDistance = getDistance(e.touches[0], e.touches[1]);
+      initialScale = scale;
+    } else if (e.touches.length === 1) {
+      isDragging = true;
+      startX = e.touches[0].clientX - currentX;
+      startY = e.touches[0].clientY - currentY;
+    }
+  }, { passive: false });
+
+  lightboxImg.addEventListener("touchmove", (e) => {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      const newDistance = getDistance(e.touches[0], e.touches[1]);
+      const zoomFactor = newDistance / startDistance;
+      scale = Math.min(3, Math.max(1, initialScale * zoomFactor));
+      updateTransform();
+    } else if (e.touches.length === 1 && isDragging) {
+      currentX = e.touches[0].clientX - startX;
+      currentY = e.touches[0].clientY - startY;
+      updateTransform();
+    }
+  }, { passive: false });
+
+  lightboxImg.addEventListener("touchend", (e) => {
+    if (e.touches.length === 0) isDragging = false;
+  });
+
+  function getDistance(touch1, touch2) {
+    const dx = touch1.clientX - touch2.clientX;
+    const dy = touch1.clientY - touch2.clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+</script>
+
+
+
+ 
+
+
+</body>
+</html>
